@@ -37,20 +37,29 @@ Aplikasi ini memungkinkan pengguna untuk melihat file PDF dan membaca ebook seca
     ```
 
 7. Atur koneksi database di file `.env`.
-
-8. Jalankan migrasi untuk membuat skema database:
-
+8. Atur bagian `.env` menjadi
     ```bash
-    php artisan migrate
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=educate
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+    SESSION_DRIVER=file
     ```
 
-9. Jalankan server pengembangan:
+9.  Buat database dengan nama `educate` di mysql
+    
+11. import `educate.sql` kedalam database yang dibuat tadi kedalam mysql
+
+12. Jalankan server pengembangan:
 
     ```bash
     php artisan serve
     ```
 
-10. Akses aplikasi di browser Anda melalui URL:
+13. Akses aplikasi di browser Anda melalui URL:
 
     ```
     http://localhost:8000
